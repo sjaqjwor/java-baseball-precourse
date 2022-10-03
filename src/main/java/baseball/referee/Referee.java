@@ -11,14 +11,14 @@ public class Referee {
 
     public RefereeResult compareTwoBalls(Ball opponentBall, Ball userBall) {
         if (checkAnswer(opponentBall, userBall)) {
-            return RefereeResult.create(CompareResult.ANSWER);
+            return RefereeResult.create(CompareResult.ANSWER, createStrikeHint(opponentBall, userBall));
         }
         if (checkIsNothing(opponentBall, userBall)) {
             return RefereeResult.create(CompareResult.WRONG, HintConstant.NOTHING);
         }
         String ballHint = createBallHint(opponentBall, userBall);
         String strikeHint = createStrikeHint(opponentBall, userBall);
-        return RefereeResult.create(CompareResult.WRONG, Strings.concat(ballHint,strikeHint));
+        return RefereeResult.create(CompareResult.WRONG, Strings.concat(ballHint, strikeHint));
 
     }
 

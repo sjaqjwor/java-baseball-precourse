@@ -1,7 +1,5 @@
 package baseball.referee;
 
-import java.util.Objects;
-
 public class RefereeResult {
 
     private CompareResult compareResult;
@@ -30,20 +28,6 @@ public class RefereeResult {
 
     public String getHint() {
         return hint;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        RefereeResult that = (RefereeResult) o;
-        return compareResult == that.compareResult &&
-                Objects.equals(hint, that.hint);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(compareResult, hint);
     }
 
 }

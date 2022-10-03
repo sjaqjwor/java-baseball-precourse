@@ -10,4 +10,5 @@ public class RestartNumberValidator implements Validator {
             throw new IllegalArgumentException();
         }
     }
+
 }

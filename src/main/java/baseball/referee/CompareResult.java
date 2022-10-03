@@ -1,6 +1,8 @@
 package baseball.referee;
 
-public enum  CompareResult {
+public enum CompareResult {
+
     WRONG,
     ANSWER
+    
 }

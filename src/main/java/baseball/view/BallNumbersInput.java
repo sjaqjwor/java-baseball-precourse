@@ -8,4 +8,5 @@ public class BallNumbersInput {
         System.out.print("숫자를입력해주세요 : ");
         return Console.readLine();
     }
+
 }

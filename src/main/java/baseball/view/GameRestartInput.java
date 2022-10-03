@@ -8,4 +8,5 @@ public class GameRestartInput {
         System.out.println("게임을새로시작하려면1,종료하려면2를입력하세요.");
         return Console.readLine();
     }
+
 }

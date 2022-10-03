@@ -1,6 +1,8 @@
 package baseball.game;
 
+import baseball.player.Opponent;
 import baseball.player.Player;
+import baseball.player.User;
 import baseball.referee.CompareResult;
 import baseball.referee.Referee;
 import baseball.referee.RefereeResult;
@@ -21,12 +23,11 @@ public class BaseballGame implements Game {
     private Validator restartNumberValidator;
     private Referee referee;
     private List<Integer> randomBallNumbers;
-    private Player opponent;
-    private Player user;
+    private Player<List<Integer>> opponent;
+    private Player<String> user;
 
-    public BaseballGame(Player opponent, Player user) {
-        this.opponent = opponent;
-        this.user = user;
+    public BaseballGame() {
+
     }
 
     @Override
@@ -54,8 +55,11 @@ public class BaseballGame implements Game {
     public void init() {
         this.isRunning = false;
         this.referee = new Referee();
+        this.opponent = new Opponent();
+        this.user = new User();
         this.ballNumberValidator = new BallNumberValidator();
         this.restartNumberValidator = new RestartNumberValidator();
         this.randomBallNumbers = RandomNumberGenerator.generate();
+
     }
 }

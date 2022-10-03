@@ -9,12 +9,14 @@ import java.util.Set;
 
 public class RandomNumberGenerator {
 
-    private static final int MAX_NUMBER_LENGTH = 3;
+    private static final int MAX_LENGTH = 3;
+    private static final int MIN = 1;
+    private static final int MAX = 9;
 
     public static List<Integer> generate() {
         Set<Integer> randomNumber = new HashSet<>();
-        while (randomNumber.size() < MAX_NUMBER_LENGTH) {
-            randomNumber.add(Randoms.pickNumberInRange(1, 9));
+        while (randomNumber.size() < MAX_LENGTH) {
+            randomNumber.add(Randoms.pickNumberInRange(MIN, MAX));
         }
         return new LinkedList<>(randomNumber);
     }

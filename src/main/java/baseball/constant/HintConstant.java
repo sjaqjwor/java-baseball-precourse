@@ -1,4 +1,4 @@
-package baseball.referee;
+package baseball.constant;
 
 public class HintConstant {
 

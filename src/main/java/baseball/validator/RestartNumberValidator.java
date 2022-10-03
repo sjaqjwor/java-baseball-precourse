@@ -1,12 +1,12 @@
 package baseball.validator;
 
-public class RestartNumberValidator implements Validator {
+import baseball.constant.ValidatorConstant;
 
-    private static final String RESTART_NUMBER_REGEX = "[1-2]{1}";
+public class RestartNumberValidator implements Validator {
 
     @Override
     public void valid(String inputNumber) {
-        if (!inputNumber.matches(RESTART_NUMBER_REGEX)) {
+        if (!inputNumber.matches(ValidatorConstant.RESTART_NUMBER_REGEX)) {
             throw new IllegalArgumentException();
         }
     }

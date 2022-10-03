@@ -1,6 +1,7 @@
 package baseball.referee;
 
 import baseball.ball.Ball;
+import baseball.constant.HintConstant;
 import org.assertj.core.util.Strings;
 
 import java.util.HashSet;
